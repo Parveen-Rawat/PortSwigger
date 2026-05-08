@@ -32,7 +32,9 @@
 
 # API recon
 - Find API endpoints --> hwere API recieves request for a specific resources
+
 ![alt text](/API_testing/Images/image.png)
+
 - API endpoint for this request is `/api/books`. The result will be the software as the server will retrieve the books list and send it to client via API
 - After identifying the endpoint, Need to determine how to interact with them
 - This allows you to contruct valid HTTP request
@@ -68,9 +70,11 @@ To solve the lab, find the exposed API documentation and delete carlos. You can 
 3. Refresh browser while keep intercept on in burp
 4. Catch request and sent to repeater
 5. Search for common api endpoints 
+
 ![alt text](/API_testing/Images/image-1.png)
 
 There, we can see the api documentation and endpoints for performing operations such as retrieving user info and deleting user
+
 ![alt text](/API_testing/Images/image-2.png)
 
 6. Let see if we can retrieve target (carlos) account info
@@ -78,6 +82,7 @@ There, we can see the api documentation and endpoints for performing operations 
 ![alt text](/API_testing/Images/image-3.png)
 
 7. Now.Sent the request to `/api/user/carlos` with `DELETE` as HTTP METHOD
+
 ![alt text](/API_testing/Images/image-4.png)
 
 Solved !!!!
@@ -116,14 +121,17 @@ To solve the lab, exploit a hidden API endpoint to buy a Lightweight l33t Leathe
 1. Login your account with given credentials
 2. Head over to home --> lightwieght leather and while interpecting add the jacket to the cart
 3. Got the request to `/api/product/1/price`
+
 ![alt text](/API_testing/Images/image-5.png)
 
 4. Seems to handling json data lets try to read documentation if we can find or cut down the api uri and read it one by one
+
 ![alt text](/API_testing/Images/image-6.png)
 
 Same message in all
 
 5. Lets see what method does it accepts
+
 ![alt text](/API_testing/Images/image-7.png)
 
 6. Seems like only GET and PATCH are supportive and with PATCH the content-type must be `application/json` so lets make the changes and observe again
