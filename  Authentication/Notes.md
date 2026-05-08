@@ -76,4 +76,3 @@ Launch and capture the request --> sent it to intruder but before that see how t
 
 Sniper attack --> paste the username list --> attack --> look for changes
 
-
